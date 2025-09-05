@@ -123,12 +123,18 @@ export default function BlogPage() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {featuredPosts.map((post) => (
+            {featuredPosts.map((post, index) => {
+              const featuredImages = [
+                "/images/emergency.webp",
+                "/images/global.webp", 
+                "/images/retirement.jpg"
+              ];
+              return (
               <div key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 overflow-hidden">
                   <Image
-                    src="/images/advisor.jpg"
-                    alt={post.title}
+                    src={featuredImages[index]}
+                    alt={post.image}
                     width={400}
                     height={200}
                     className="w-full h-full object-cover"
@@ -152,7 +158,8 @@ export default function BlogPage() {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -166,14 +173,20 @@ export default function BlogPage() {
               <div className="mb-12">
                 <h2 className="text-3xl font-bold text-primary mb-8">Latest Articles</h2>
                 <div className="space-y-8">
-                  {regularPosts.map((post) => (
+                  {regularPosts.map((post, index) => {
+                    const regularImages = [
+                      "/images/investments.jpg",
+                      "/images/piggybank.jpg",
+                      "/images/success.jpg"
+                    ];
+                    return (
                     <article key={post.id} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="md:col-span-1">
                           <div className="h-48 overflow-hidden rounded-xl">
                             <Image
-                              src="/images/advisor.jpg"
-                              alt={post.title}
+                              src={regularImages[index]}
+                              alt={post.image}
                               width={400}
                               height={200}
                               className="w-full h-full object-cover"
@@ -200,7 +213,8 @@ export default function BlogPage() {
                         </div>
                       </div>
                     </article>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 
