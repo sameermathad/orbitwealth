@@ -58,11 +58,11 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/success.jpg"
+                  src="/about/nagaraj4.jpeg"
                   alt="Mission and vision representation"
                   width={600}
                   height={400}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
             <div className="order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/advisor.jpg"
+                  src="/images/piggybank.jpg"
                   alt="Financial advisor having a conversation with clients"
                   width={600}
                   height={400}

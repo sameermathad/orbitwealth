@@ -98,11 +98,11 @@ export default function ServicesPage() {
             <div className="order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/investments.jpg"
+                  src="/images/familyplans2.jpg"
                   alt="Asset allocation and investment portfolio management"
                   width={600}
                   height={400}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                           <div className="order-2 lg:order-1">
                 <div className="rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/investments.jpg"
+                    src="/images/global.webp"
                     alt="Global investment opportunities"
                     width={600}
                     height={400}
@@ -355,7 +355,7 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/success.jpg"
+                  src="/images/happycouple.jpg"
                   alt="Retirement planning and financial security"
                   width={600}
                   height={400}
@@ -374,7 +374,7 @@ export default function ServicesPage() {
             <div className="order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/familyplans2.jpg"
+                  src="/images/familyplans.jpg"
                   alt="Regular income planning and financial stability"
                   width={600}
                   height={400}
@@ -493,7 +493,7 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/couple.jpg"
+                  src="/images/nri.webp"
                   alt="Succession planning and wealth transfer"
                   width={600}
                   height={400}
