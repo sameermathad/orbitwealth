@@ -104,11 +104,11 @@ export default function ContactPage() {
       <section className="bg-primary text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold leading-tight mb-6">
-            Let's Make Your Financial Goals a Reality
+            Let&apos;s Make Your Financial Goals a Reality
           </h1>
           <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-body mb-8">
-            Ready to start your financial journey? We're here to help you create a personalized plan 
-            that puts your dreams within reach. Let's begin with a conversation.
+            Ready to start your financial journey? We&apos;re here to help you create a personalized plan 
+            that puts your dreams within reach. Let&apos;s begin with a conversation.
           </p>
           <a 
             href="#contact-form" 
@@ -132,11 +132,11 @@ export default function ContactPage() {
                   <div className="text-6xl mb-4">✅</div>
                   <h3 className="text-2xl font-bold text-green-800 mb-4">Thank You!</h3>
                   <p className="text-green-700 mb-6">
-                    Your message has been sent successfully. We'll get back to you within 24 hours 
+                    Your message has been sent successfully. We&apos;ll get back to you within 24 hours 
                     to discuss your financial goals and how we can help.
                   </p>
                   <div className="text-sm text-green-600">
-                    You'll also receive a confirmation email shortly.
+                    You&apos;ll also receive a confirmation email shortly.
                   </div>
                 </div>
               ) : (
@@ -362,7 +362,7 @@ export default function ContactPage() {
               <div className="text-6xl mb-6">🎥</div>
               <h3 className="text-2xl font-bold text-primary mb-4">Virtual Meeting</h3>
               <p className="text-gray-600 mb-6">
-                Can't visit our office? We offer secure video consultations from anywhere in the world. 
+                Can&apos;t visit our office? We offer secure video consultations from anywhere in the world. 
                 Same expertise, same personal touch.
               </p>
               <button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
@@ -424,8 +424,8 @@ export default function ContactPage() {
             Ready to Start Your Financial Journey?
           </h2>
           <p className="text-xl text-gray-100 mb-8 leading-relaxed">
-            Don't wait to secure your financial future. Every day of planning brings you closer to your goals. 
-            Let's start the conversation today.
+            Don&apos;t wait to secure your financial future. Every day of planning brings you closer to your goals. 
+            Let&apos;s start the conversation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

@@ -102,8 +102,8 @@ export default function ToolsPage() {
               More Planning Tools Coming Soon
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
-              We're continuously developing new tools to help you make informed financial decisions. 
-              Here's what's in development.
+              We&apos;re continuously developing new tools to help you make informed financial decisions. 
+              Here&apos;s what&apos;s in development.
             </p>
           </div>
           

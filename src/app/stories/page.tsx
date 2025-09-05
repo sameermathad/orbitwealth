@@ -92,7 +92,7 @@ export default function ClientStoriesPage() {
       <section className="bg-primary text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold leading-tight mb-6">
-            Lives We've Helped
+            Lives We&apos;ve Helped
           </h1>
           <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-body mb-8">
             Real stories from real people who have transformed their financial future with Orbit Wealth. 
@@ -192,7 +192,7 @@ export default function ClientStoriesPage() {
                   
                   <div className="mt-8 p-6 bg-white rounded-2xl shadow-lg">
                     <blockquote className="text-gray-700 italic mb-4">
-                      "{story.testimonial}"
+                      &ldquo;{story.testimonial}&rdquo;
                     </blockquote>
                     <div className="flex items-center justify-between">
                       <div>
@@ -235,8 +235,8 @@ export default function ClientStoriesPage() {
               The Impact of Our Work
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Numbers tell a story, but the real impact is measured in the lives we've helped transform 
-              and the dreams we've helped achieve.
+              Numbers tell a story, but the real impact is measured in the lives we&apos;ve helped transform 
+              and the dreams we&apos;ve helped achieve.
             </p>
           </div>
           
@@ -309,7 +309,7 @@ export default function ClientStoriesPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-primary mb-2">Results Focused</h3>
-                    <p className="text-gray-700">We don't just create plans; we create results. Every strategy is designed with clear, measurable outcomes.</p>
+                    <p className="text-gray-700">We don&apos;t just create plans; we create results. Every strategy is designed with clear, measurable outcomes.</p>
                   </div>
                 </div>
               </div>

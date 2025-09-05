@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-xl font-heading font-semibold text-primary mb-3">Outcome-Driven Strategies</h3>
                   <p className="text-gray-700 leading-relaxed font-body">
-                    We don't just create plans; we create results. Every strategy is designed with 
+                    We don&apos;t just create plans; we create results. Every strategy is designed with 
                     clear, measurable outcomes that align with your life goals and timeline.
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed font-body">
                   Orbit Wealth was born from a simple observation: too many people were receiving 
-                  generic financial advice that didn't account for their unique circumstances, goals, and values.
+                  generic financial advice that didn&apos;t account for their unique circumstances, goals, and values.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed font-body">
                   Our founder, having experienced both the challenges of complex financial decisions and 
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed font-body">
                   Today, we continue to uphold the values that inspired our founding: integrity, empathy, 
-                  personalization, and an unwavering commitment to putting our clients' interests first.
+                  personalization, and an unwavering commitment to putting our clients&apos; interests first.
                 </p>
                 <div className="pt-4">
                   <h3 className="text-xl font-heading font-semibold text-primary mb-3">Our Core Values</h3>
@@ -148,7 +148,7 @@ export default function AboutPage() {
               {
                 credential: "IIM",
                 title: "Indian Institute of Management",
-                description: "Advanced management education from one of India's premier business schools",
+                description: "Advanced management education from one of India&apos;s premier business schools",
                 icon: "🎓"
               },
               {
@@ -253,7 +253,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-xl text-gray-100 mb-8 leading-relaxed font-body">
             Discover how our personalized approach to financial planning can help you achieve your goals. 
-            Let's start a conversation about your financial future.
+            Let&apos;s start a conversation about your financial future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

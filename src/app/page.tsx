@@ -232,7 +232,7 @@ export default function Home() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
               >
-                Orbit Wealth isn't just about managing money—it's about orchestrating your financial future. 
+                Orbit Wealth isn&apos;t just about managing money—it&apos;s about orchestrating your financial future. 
                 We blend cutting-edge market insights with personalized strategies, creating a unique orbit 
                 of prosperity that revolves around your aspirations and values.
               </motion.p>
