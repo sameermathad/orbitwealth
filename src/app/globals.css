@@ -3,13 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #ff6b35;
+  --primary-dark: #e55a2b;
+  --primary-medium: #ff8c5a;
+  --primary-light: #ffb088;
+  --neutral: #f8fafc;
+  --accent: #10b981;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-medium: var(--primary-medium);
+  --color-primary-light: var(--primary-light);
+  --color-neutral: var(--neutral);
+  --color-accent: var(--accent);
+  --font-lato: var(--font-lato);
+  --font-inter: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +34,215 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Typography */
+.font-heading {
+  font-family: var(--font-lato), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom utility classes */
+.text-primary { color: #ff6b35; }
+.text-primary-dark { color: #e55a2b; }
+.text-primary-medium { color: #ff8c5a; }
+.text-primary-light { color: #ffb088; }
+.text-accent { color: #10b981; }
+.bg-primary { background-color: #ff6b35; }
+.bg-primary-dark { background-color: #e55a2b; }
+.bg-primary-medium { background-color: #ff8c5a; }
+.bg-primary-light { background-color: #ffb088; }
+.bg-accent { background-color: #10b981; }
+.bg-neutral { background-color: #f8fafc; }
+
+/* Modern button styles */
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-neutral text-primary border-2 border-primary font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg;
+}
+
+.btn-accent {
+  @apply bg-accent hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg;
+}
+
+/* Modern card styles */
+.card-modern {
+  @apply bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100;
+}
+
+/* Modern section styles */
+.section-modern {
+  @apply py-20 px-4 sm:px-6 lg:px-8;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+}
+
+/* Smooth scrolling and parallax enhancements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Parallax performance optimizations */
+.parallax-element {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Scrolling Principles Ribbon */
+.principles-ribbon {
+  --orange: #ff6b35;
+  --navy: #0f172a;
+  --ink: #0b1220;
+  --muted: #606b7a;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eef0f3;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  margin: 32px auto;
+  max-width: 1200px;
+}
+
+.principles-ribbon .track {
+  display: flex;
+  gap: 64px;
+  white-space: nowrap;
+  animation: slide 28s linear infinite;
+}
+
+.principles-ribbon .row {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 48px;
+}
+
+.principles-ribbon .serif {
+  font-family: "Lato", system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.principles-ribbon .sans {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.principles-ribbon .big {
+  font-weight: 900;
+  font-size: 32px;
+  color: var(--ink);
+}
+
+.principles-ribbon .mid {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.principles-ribbon .light {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.principles-ribbon .accent {
+  color: var(--orange);
+}
+
+.principles-ribbon .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--orange);
+  border-radius: 999px;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .principles-ribbon .big {
+    font-size: 22px;
+  }
+  .principles-ribbon .mid {
+    font-size: 16px;
+  }
+  .principles-ribbon .row {
+    gap: 20px;
+    padding: 18px 32px;
+  }
+}
+
+/* Service Card Hover Effects */
+.service-card {
+  position: relative;
+}
+
+.service-card:hover {
+  background: white !important;
+  border-color: #e5e7eb !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Liquid Blob Frame */
+.liquid-blob {
+  width: 100%;
+  height: 500px;
+  clip-path: path("M 20 0 Q 0 20 0 50 Q 0 80 20 100 Q 40 120 70 120 Q 100 120 120 100 Q 140 80 140 50 Q 140 20 120 0 Q 100 -20 70 -20 Q 40 -20 20 0 Z");
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+  transition: all 0.3s ease;
+  animation: blobFloat 6s ease-in-out infinite;
+}
+
+.liquid-blob:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.2));
+  animation-play-state: paused;
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    clip-path: path("M 20 0 Q 0 20 0 50 Q 0 80 20 100 Q 40 120 70 120 Q 100 120 120 100 Q 140 80 140 50 Q 140 20 120 0 Q 100 -20 70 -20 Q 40 -20 20 0 Z");
+  }
+  25% {
+    clip-path: path("M 25 0 Q 5 15 5 45 Q 5 85 25 105 Q 45 125 75 115 Q 105 125 125 105 Q 145 85 145 45 Q 145 15 125 0 Q 105 -15 75 -15 Q 45 -15 25 0 Z");
+  }
+  50% {
+    clip-path: path("M 15 0 Q -5 25 0 55 Q 5 75 25 95 Q 35 115 65 125 Q 95 115 115 95 Q 135 75 140 55 Q 145 25 125 0 Q 105 -25 75 -25 Q 35 -25 15 0 Z");
+  }
+  75% {
+    clip-path: path("M 30 0 Q 10 10 10 40 Q 10 90 30 110 Q 50 130 80 120 Q 110 130 130 110 Q 150 90 150 40 Q 150 10 130 0 Q 110 -10 80 -10 Q 50 -10 30 0 Z");
+  }
+}
+
+/* Enhanced blur effects for parallax */
+.blur-parallax {
+  filter: blur(0);
+  transition: filter 0.3s ease-out;
+}
+
+.blur-parallax:hover {
+  filter: blur(1px);
 }
