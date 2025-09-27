@@ -149,23 +149,23 @@ export default function Home() {
             {[
               {
                 icon: "🚀",
-                metric: "₹150Cr+ Assets Managed",
-                description: "Growing wealth across diverse portfolios"
+                metric: "Portfolio Management",
+                description: "Diverse investment strategies"
               },
               {
                 icon: "🎯",
-                metric: "20+ Expert Advisors",
-                description: "Specialized financial professionals"
+                metric: "Financial Planning",
+                description: "Personalized solutions"
               },
               {
                 icon: "⭐",
-                metric: "Trusted Since 2018",
-                description: "Six years of client success"
+                metric: "Since 2023",
+                description: "Trusted expertise"
               },
               {
                 icon: "👨‍👩‍👧‍👦",
-                metric: "800+ Happy Families",
-                description: "Transforming financial futures"
+                metric: "100+ Families",
+                description: "Happy clients"
               }
             ].map((stat, index) => (
               <motion.div 
