@@ -3,10 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #ff6b35;
-  --primary-dark: #e55a2b;
-  --primary-medium: #ff8c5a;
-  --primary-light: #ffb088;
+  --primary: #f4af21;
+  --primary-dark: #d49a1c;
+  --primary-medium: #f6b847;
+  --primary-light: #f8c166;
   --neutral: #f8fafc;
   --accent: #10b981;
 }
@@ -47,21 +47,22 @@ body {
 }
 
 /* Custom utility classes */
-.text-primary { color: #ff6b35; }
-.text-primary-dark { color: #e55a2b; }
-.text-primary-medium { color: #ff8c5a; }
-.text-primary-light { color: #ffb088; }
+.text-primary { color: #f4af21; }
+.text-primary-dark { color: #d49a1c; }
+.text-primary-medium { color: #f6b847; }
+.text-primary-light { color: #f8c166; }
 .text-accent { color: #10b981; }
-.bg-primary { background-color: #ff6b35; }
-.bg-primary-dark { background-color: #e55a2b; }
-.bg-primary-medium { background-color: #ff8c5a; }
-.bg-primary-light { background-color: #ffb088; }
+.bg-primary { background-color: #f4af21; }
+.bg-primary-dark { background-color: #d49a1c; }
+.bg-primary-medium { background-color: #f6b847; }
+.bg-primary-light { background-color: #f8c166; }
 .bg-accent { background-color: #10b981; }
 .bg-neutral { background-color: #f8fafc; }
 
 /* Modern button styles */
 .btn-primary {
   @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105;
+  color: #08306d !important;
 }
 
 .btn-secondary {
@@ -84,7 +85,7 @@ body {
 
 /* Gradient backgrounds */
 .gradient-primary {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+  background: linear-gradient(135deg, #f4af21 0%, #f6b847 100%);
 }
 
 .gradient-accent {

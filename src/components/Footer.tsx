@@ -25,17 +25,20 @@ export default function Footer() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
-            <div className="flex items-center mb-6">
-            <div className="w-48 h-20">
-  <Image
-    src="/logo-dark-tran.png"
-    alt="Orbit Wealth Logo"
-    width={192}
-    height={75}
-    className="w-full h-full object-contain"
-  />
-</div>
-              
+            <div className="flex items-center mb-6 space-x-4">
+              <div className="w-48 h-20">
+                <Image
+                  src="/logo-dark-tran.png"
+                  alt="Orbit Wealth Logo"
+                  width={192}
+                  height={75}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="text-white font-heading">
+                <div className="text-2xl font-bold leading-tight">ORBIT</div>
+                <div className="text-2xl font-bold leading-tight">WEALTH</div>
+              </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md font-body leading-relaxed">
               Empathetic, goal-based financial planning that puts you first. 

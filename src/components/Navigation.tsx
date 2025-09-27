@@ -23,7 +23,7 @@ export default function Navigation() {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <nav className="bg-white/90 border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm">
+    <nav className="border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm" style={{ backgroundColor: '#08306d' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -33,16 +33,17 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center space-x-4">
               <div className="w-48 h-20">
                 <Image
-                  src="/logo-side-tran.png"
+                  src="/logoname/logo1x.png"
                   alt="Orbit Wealth Logo"
                   width={162}
                   height={50}
                   className="w-full h-full object-contain py-4"
                 />
               </div>
+             
             </Link>
           </motion.div>
 
@@ -65,8 +66,8 @@ export default function Navigation() {
                     href={item.href}
                     className={`font-body text-sm font-medium transition-all duration-200 relative ${
                       isActive(item.href)
-                        ? 'text-primary'
-                        : 'text-gray-600 hover:text-primary'
+                        ? 'text-white'
+                        : 'text-white/80 hover:text-white'
                     }`}
                   >
                     {item.name}
@@ -111,7 +112,7 @@ export default function Navigation() {
           >
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-primary focus:outline-none focus:text-primary p-2"
+              className="text-white/80 hover:text-white focus:outline-none focus:text-white p-2"
               whileTap={{ scale: 0.95 }}
             >
               <motion.svg 
@@ -137,7 +138,7 @@ export default function Navigation() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="lg:hidden bg-white border-t border-gray-100"
+            className="lg:hidden border-t border-gray-100" style={{ backgroundColor: '#08306d' }}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -160,8 +161,8 @@ export default function Navigation() {
                     href={item.href}
                     className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
                       isActive(item.href)
-                        ? 'bg-primary text-white'
-                        : 'text-gray-600 hover:bg-neutral hover:text-primary'
+                        ? 'bg-white/20 text-white'
+                        : 'text-white/80 hover:bg-white/10 hover:text-white'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
