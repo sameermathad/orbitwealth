@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-4 gap-12"
@@ -28,17 +28,14 @@ export default function Footer() {
             <div className="flex items-center mb-6 space-x-4">
               <div className="w-48 h-20">
                 <Image
-                  src="/logo-dark-tran.png"
+                  src="/logoname/logo1x.png"
                   alt="Orbit Wealth Logo"
                   width={192}
                   height={75}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="text-white font-heading">
-                <div className="text-2xl font-bold leading-tight">ORBIT</div>
-                <div className="text-2xl font-bold leading-tight">WEALTH</div>
-              </div>
+              
             </div>
             <p className="text-gray-300 mb-6 max-w-md font-body leading-relaxed">
               Empathetic, goal-based financial planning that puts you first. 
@@ -52,14 +49,14 @@ export default function Footer() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
             >
-              <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 p-3 rounded-xl">
-                <span className="text-primary font-semibold text-sm">NISM</span>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-3 rounded-xl">
+                <span className="text-secondary font-semibold text-sm">NISM</span>
               </div>
-              <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 p-3 rounded-xl">
-                <span className="text-primary font-semibold text-sm">AMFI</span>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-3 rounded-xl">
+                <span className="text-secondary font-semibold text-sm">AMFI</span>
               </div>
-              <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 p-3 rounded-xl">
-                <span className="text-primary font-semibold text-sm">IIM</span>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-3 rounded-xl">
+                <span className="text-secondary font-semibold text-sm">IIM</span>
               </div>
             </motion.div>
           </motion.div>
@@ -71,13 +68,13 @@ export default function Footer() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
-            <h3 className="text-lg font-heading font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-heading font-bold mb-6 text-secondary">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-300 hover:text-primary transition-colors font-body">About Us</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors font-body">Services</Link></li>
-              <li><Link href="/tools" className="text-gray-300 hover:text-primary transition-colors font-body">Tools & Calculators</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-primary transition-colors font-body">Blog</Link></li>
-              <li><Link href="/stories" className="text-gray-300 hover:text-primary transition-colors font-body">Client Stories</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-secondary transition-colors font-body">About Us</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-secondary transition-colors font-body">Services</Link></li>
+              <li><Link href="/tools" className="text-gray-300 hover:text-secondary transition-colors font-body">Tools & Calculators</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-secondary transition-colors font-body">Blog</Link></li>
+              <li><Link href="/stories" className="text-gray-300 hover:text-secondary transition-colors font-body">Client Stories</Link></li>
             </ul>
           </motion.div>
 
@@ -88,13 +85,13 @@ export default function Footer() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
-            <h3 className="text-lg font-heading font-bold mb-6">Services</h3>
+            <h3 className="text-lg font-heading font-bold mb-6 text-secondary">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="/services#financial-planning" className="text-gray-300 hover:text-primary transition-colors font-body">Financial Planning</Link></li>
-              <li><Link href="/services#asset-allocation" className="text-gray-300 hover:text-primary transition-colors font-body">Asset Allocation</Link></li>
-              <li><Link href="/services#investment-solutions" className="text-gray-300 hover:text-primary transition-colors font-body">Investment Solutions</Link></li>
-              <li><Link href="/services#retirement-planning" className="text-gray-300 hover:text-primary transition-colors font-body">Retirement Planning</Link></li>
-              <li><Link href="/services#global-investments" className="text-gray-300 hover:text-primary transition-colors font-body">Global Investments</Link></li>
+              <li><Link href="/services#financial-planning" className="text-gray-300 hover:text-secondary transition-colors font-body">Financial Planning</Link></li>
+              <li><Link href="/services#asset-allocation" className="text-gray-300 hover:text-secondary transition-colors font-body">Asset Allocation</Link></li>
+              <li><Link href="/services#investment-solutions" className="text-gray-300 hover:text-secondary transition-colors font-body">Investment Solutions</Link></li>
+              <li><Link href="/services#retirement-planning" className="text-gray-300 hover:text-secondary transition-colors font-body">Retirement Planning</Link></li>
+              <li><Link href="/services#global-investments" className="text-gray-300 hover:text-secondary transition-colors font-body">Global Investments</Link></li>
             </ul>
           </motion.div>
         </motion.div>
@@ -123,11 +120,11 @@ export default function Footer() {
               </div>
               
               <div className="text-gray-400 text-sm font-body">
-                <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
               </div>
               
               <div className="text-gray-400 text-sm font-body">
-                <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+                <Link href="/terms" className="hover:text-secondary transition-colors">Terms of Service</Link>
               </div>
             </div>
           </div>

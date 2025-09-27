@@ -23,7 +23,7 @@ export default function Navigation() {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <nav className="border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm" style={{ backgroundColor: '#08306d' }}>
+    <nav className="bg-primary sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -73,7 +73,7 @@ export default function Navigation() {
                     {item.name}
                     {isActive(item.href) && (
                       <motion.div 
-                        className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"
+                        className="absolute -bottom-2 left-0 w-full h-0.5 bg-secondary rounded-full"
                         layoutId="activeIndicator"
                         initial={false}
                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -138,7 +138,7 @@ export default function Navigation() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="lg:hidden border-t border-gray-100" style={{ backgroundColor: '#08306d' }}
+            className="lg:hidden bg-primary border-t border-gray-100"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -161,7 +161,7 @@ export default function Navigation() {
                     href={item.href}
                     className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
                       isActive(item.href)
-                        ? 'bg-white/20 text-white'
+                        ? 'bg-secondary/20 text-white'
                         : 'text-white/80 hover:bg-white/10 hover:text-white'
                     }`}
                     onClick={() => setIsMenuOpen(false)}

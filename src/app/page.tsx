@@ -84,16 +84,18 @@ export default function Home() {
               >
                 <Link 
                   href="/contact" 
-                  className="btn-primary inline-flex items-center text-lg px-8 py-4 group"
+                  className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-secondary to-secondary-dark text-primary font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
                 >
-                  Start Your Journey
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  <span className="relative z-10 flex items-center">
+                    Start Your Journey
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
                 </Link>
                 <Link 
                   href="/tools" 
-                  className="btn-secondary inline-flex items-center text-lg px-8 py-4 group"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-primary/20 text-primary font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-primary/40"
                 >
                   Calculate Your Goals
                   <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,7 +290,7 @@ export default function Home() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <motion.h2 
-              className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6"
+              className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -460,13 +462,13 @@ export default function Home() {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="service-card bg-gradient-to-br from-primary to-primary-medium border border-primary rounded-2xl p-12 h-full transition-all duration-300 flex flex-col items-center justify-center text-center">
-                  {/* Default state - orange background with white text */}
-                  <h3 className="text-2xl font-heading font-bold text-white mb-0 transition-all duration-300 group-hover:text-gray-900 group-hover:mb-6">
+                  {/* Default state - blue background with yellow text */}
+                  <h3 className="text-2xl font-heading font-bold text-secondary mb-0 transition-all duration-300 group-hover:text-primary group-hover:mb-6">
                     {service.title}
                   </h3>
                   
                   {/* Hover state - description fades in */}
-                  <p className="text-white leading-relaxed font-body opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-gray-600">
+                  <p className="text-secondary leading-relaxed font-body opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-primary">
                     {service.description}
                   </p>
                   
@@ -515,7 +517,7 @@ export default function Home() {
       </section>
 
       {/* Tools Teaser */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -524,8 +526,8 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <motion.h2 
-                className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-8"
+              <motion.h2
+                className="text-4xl md:text-5xl font-heading font-bold text-secondary mb-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -534,7 +536,7 @@ export default function Home() {
                 Navigate Your Financial Future with Precision
               </motion.h2>
               <motion.p 
-                className="text-lg text-gray-600 mb-8 leading-relaxed font-body"
+                className="text-lg text-gray-100 mb-8 leading-relaxed font-body"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -551,28 +553,28 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
               >
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-3">
+                    <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-700 font-body">Retirement Orbit Calculator</span>
+                  <span className="text-white font-body">Retirement Orbit Calculator</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-3">
+                    <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-700 font-body">Wealth Trajectory Planner</span>
+                  <span className="text-white font-body">Wealth Trajectory Planner</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-3">
+                    <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-700 font-body">Portfolio Constellation Builder</span>
+                  <span className="text-white font-body">Portfolio Constellation Builder</span>
                 </div>
               </motion.div>
               <motion.div
@@ -839,7 +841,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section with Subtle Parallax */}
-      <section className="py-24 bg-gradient-to-r from-gray-900 to-gray-800 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-primary to-primary-dark text-white relative overflow-hidden">
         {/* Subtle CTA Background */}
         <div className="absolute inset-0">
           <div 

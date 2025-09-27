@@ -55,45 +55,31 @@ export default function ContactPage() {
       icon: "📧",
       title: "Email Us",
       description: "Send us a detailed message and we'll respond within 24 hours.",
-      contact: "hello@orbitwealth.in",
+      contact: "connect@orbitwealth.in",
       action: "Send Email"
     },
     {
       icon: "📞",
       title: "Call Us",
       description: "Speak directly with our financial advisors during business hours.",
-      contact: "+91 98765 43210",
+      contact: "+91 - 970 3616 879",
       action: "Call Now"
     },
     {
       icon: "💬",
       title: "WhatsApp",
       description: "Quick questions? Send us a message on WhatsApp for fast responses.",
-      contact: "+91 98765 43210",
+      contact: "+91 - 970 3616 879",
       action: "WhatsApp"
     }
   ];
 
   const officeLocations = [
     {
-      city: "Mumbai",
-      address: "Nariman Point, Financial District",
-      phone: "+91 22 1234 5678",
-      email: "mumbai@orbitwealth.in",
-      hours: "Mon-Fri: 9:00 AM - 6:00 PM"
-    },
-    {
-      city: "Bangalore",
-      address: "MG Road, Central Business District",
-      phone: "+91 80 1234 5678",
-      email: "bangalore@orbitwealth.in",
-      hours: "Mon-Fri: 9:00 AM - 6:00 PM"
-    },
-    {
-      city: "Delhi",
-      address: "Connaught Place, Central Delhi",
-      phone: "+91 11 1234 5678",
-      email: "delhi@orbitwealth.in",
+      city: "Hyderabad",
+      address: "4th Floor Apurupa Turbo, #787, Road#36, Jubilee Hills",
+      phone: "+91 - 970 3616 879",
+      email: "connect@orbitwealth.in",
       hours: "Mon-Fri: 9:00 AM - 6:00 PM"
     }
   ];
