@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -8,7 +8,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -22,8 +31,23 @@ export default function Navigation() {
 
   const isActive = (href: string) => pathname === href;
 
+  const isScrolled = scrollY > 50;
+  const blurIntensity = Math.min(scrollY / 5, 40);
+
   return (
-    <nav className="bg-primary sticky top-0 z-50 backdrop-blur-sm">
+    <nav 
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/20 backdrop-blur-2xl' 
+          : 'bg-primary/10 backdrop-blur-sm'
+      }`}
+      style={{
+        backdropFilter: `blur(${blurIntensity}px)`,
+        backgroundColor: isScrolled 
+          ? 'rgba(255, 255, 255, 0.1)' 
+          : 'rgba(47, 120, 217, 0.1)',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -36,7 +60,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center space-x-4">
               <div className="w-48 h-20">
                 <Image
-                  src="/logoname/logo1x.png"
+                  src="/logocharcoal/logo.png"
                   alt="Orbit Wealth Logo"
                   width={162}
                   height={50}
@@ -66,14 +90,14 @@ export default function Navigation() {
                     href={item.href}
                     className={`font-body text-sm font-medium transition-all duration-200 relative ${
                       isActive(item.href)
-                        ? 'text-white'
-                        : 'text-white/80 hover:text-white'
+                        ? 'text-primary'
+                        : 'text-secondary hover:text-primary'
                     }`}
                   >
                     {item.name}
                     {isActive(item.href) && (
                       <motion.div 
-                        className="absolute -bottom-2 left-0 w-full h-0.5 bg-secondary rounded-full"
+                        className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary rounded-full"
                         layoutId="activeIndicator"
                         initial={false}
                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -112,7 +136,7 @@ export default function Navigation() {
           >
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white/80 hover:text-white focus:outline-none focus:text-white p-2"
+              className="text-secondary hover:text-primary focus:outline-none focus:text-primary p-2"
               whileTap={{ scale: 0.95 }}
             >
               <motion.svg 
@@ -138,7 +162,7 @@ export default function Navigation() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="lg:hidden bg-primary border-t border-gray-100"
+            className="lg:hidden bg-white border-t border-border"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -161,8 +185,8 @@ export default function Navigation() {
                     href={item.href}
                     className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
                       isActive(item.href)
-                        ? 'bg-secondary/20 text-white'
-                        : 'text-white/80 hover:bg-white/10 hover:text-white'
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-secondary hover:bg-neutral hover:text-primary'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >

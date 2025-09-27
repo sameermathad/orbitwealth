@@ -16,7 +16,7 @@ export default function AboutPage() {
           </p>
           <Link 
             href="/contact" 
-            className="btn-primary text-lg px-8 py-3"
+            className="btn-white text-lg px-8 py-3"
           >
             Start Your Journey
           </Link>
@@ -246,7 +246,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
+      <section className="py-20 gradient-primary text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
             Ready to Learn More About Our Approach?

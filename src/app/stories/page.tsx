@@ -89,12 +89,12 @@ export default function ClientStoriesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-neutral text-foreground py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold leading-tight mb-6">
             Lives We&apos;ve Helped
           </h1>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-body mb-8">
+          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed font-body mb-8">
             Real stories from real people who have transformed their financial future with Orbit Wealth. 
             Discover how our personalized approach has helped families and individuals achieve their dreams.
           </p>
@@ -242,14 +242,14 @@ export default function ClientStoriesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "500+", label: "Families Served", description: "From young professionals to retirees" },
-              { number: "₹2000Cr+", label: "Assets Under Advisory", description: "Comprehensive wealth management" },
-              { number: "95%", label: "Client Satisfaction", description: "Based on annual feedback surveys" },
-              { number: "15+", label: "Years of Experience", description: "Building lasting relationships" }
+              { icon: "👨‍👩‍👧‍👦", label: "100+ Families", description: "Diverse client base" },
+              { icon: "💼", label: "Wealth Management", description: "Comprehensive strategies" },
+              { icon: "⭐", label: "High Satisfaction", description: "Client feedback" },
+              { icon: "🏢", label: "Since 2023", description: "Building relationships" }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-medium rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-white">{stat.number}</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-medium rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">{stat.icon}</span>
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">{stat.label}</h3>
                 <p className="text-gray-600 leading-relaxed">{stat.description}</p>
@@ -331,7 +331,7 @@ export default function ClientStoriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
+      <section className="py-20 gradient-primary text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Write Your Success Story?

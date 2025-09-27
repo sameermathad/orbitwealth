@@ -87,12 +87,12 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-neutral text-foreground py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold leading-tight mb-6">
             Let&apos;s Make Your Financial Goals a Reality
           </h1>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-body mb-8">
+          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed font-body mb-8">
             Ready to start your financial journey? We&apos;re here to help you create a personalized plan 
             that puts your dreams within reach. Let&apos;s begin with a conversation.
           </p>
@@ -404,7 +404,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
+      <section className="py-20 gradient-primary text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your Financial Journey?
